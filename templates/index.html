@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- FULLSCREEN FLOATING LANDING -->
+<section class="relative min-h-screen pt-28 pb-28">
+
+  <!-- AURORA BACKGROUND -->
+  <div id="aurora-root" class="absolute inset-0 -z-10 pointer-events-none">
+    <div class="aurora-layer layer-1"></div>
+    <div class="aurora-layer layer-2"></div>
+    <div class="aurora-layer layer-3"></div>
+  </div>
+
+  <canvas id="aurora-particles" class="absolute inset-0 -z-5 pointer-events-none"></canvas>
+
+  <!-- HERO -->
+  <header class="text-center max-w-5xl mx-auto" data-reveal>
+    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight floating-title">
+      Empowering <span class="gradient-text">21st Century</span> Leaders
+    </h1>
+
+    <p class="mt-6 text-lg md:text-xl text-muted leading-relaxed">
+      NEXUS Academy trains students, parents, professionals and corporate teams with
+      real-world 21st-century skills — confidence, communication, critical thinking
+      and emotional intelligence.
+    </p>
+
+    <div class="mt-8 flex justify-center gap-5" data-reveal>
+      <a href="/programs" class="btn-primary ripple">Explore Programs</a>
+      <a href="/mnt/data/NEXUX ACADEMY_20250710_152855_0000.pdf (2).pdf"
+         class="btn-outline" target="_blank">Open Brochure</a>
+    </div>
+  </header>
+
+
+  <!-- MISSION -->
+  <section class="mt-32 max-w-4xl mx-auto text-center leading-relaxed" data-reveal>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Our Mission</h2>
+    <p class="text-lg md:text-xl text-muted">
+      To unlock human potential through transformative training that builds confidence,
+      clarity, productivity and emotional resilience — preparing individuals to thrive
+      in education, career and life.
+    </p>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="mt-32 grid md:grid-cols-2 gap-20 max-w-7xl mx-auto px-8" data-reveal>
+
+    <div class="space-y-10">
+      <div>
+        <h3 class="feature-title text-green-400">Students Training</h3>
+        <p class="feature-text">
+          Life skills, communication, study mastery and confidence building for academic excellence.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="feature-title text-green-400">Corporate Training</h3>
+        <p class="feature-text">
+          Leadership, teamwork, professional communication and workplace productivity enhancement.
+        </p>
+      </div>
+    </div>
+
+    <div class="space-y-10">
+      <div>
+        <h3 class="feature-title text-red-400">Placement Readiness</h3>
+        <p class="feature-text">
+          Resume refinement, interview preparation, mock interviews and career direction.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="feature-title text-red-400">Effective Parenting</h3>
+        <p class="feature-text">
+          Tools for emotional intelligence, positive discipline and strong parent-child communication.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- TRANSFORMATION CTA -->
+  <section class="mt-40 text-center max-w-4xl mx-auto" data-reveal>
+    <h2 class="text-3xl md:text-5xl font-bold mb-6">Begin Your Transformation</h2>
+    <p class="text-lg md:text-xl text-muted mb-8 leading-relaxed">
+      Start your journey with Nexus Academy and unlock measurable personal and professional growth.
+      Our training brings clarity, confidence and real transformation.
+    </p>
+
+    <div class="flex justify-center gap-6">
+      <a href="/contact" class="btn-primary ripple">Get In Touch</a>
+      <a href="/programs" class="btn-outline">See Programs & Pricing</a>
+    </div>
+  </section>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+
+{% endblock %}
