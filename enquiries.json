@@ -1,0 +1,48 @@
+[
+  {
+    "name": "jerry",
+    "email": "thomas@gmail.com",
+    "message": "how long are the courses\r\n"
+  },
+  {
+    "name": "KFC",
+    "email": "nnn@gmail.com",
+    "message": "hie"
+  },
+  {
+    "name": "jeevan",
+    "email": "jijijeevan@gmail.com",
+    "message": "hello",
+    "course": "Placement Readiness"
+  },
+  {
+    "name": "joel",
+    "email": "thomas@gmail.com",
+    "message": "how long is the course",
+    "course": "Students Training"
+  },
+  {
+    "name": "jeevan",
+    "email": "thomas@gmail.com",
+    "message": "hello",
+    "course": "Students Training"
+  },
+  {
+    "name": "joel",
+    "email": "nqtkeob041@tmpoinbox.com",
+    "message": "how long is the course",
+    "course": "Placement Readiness"
+  },
+  {
+    "name": "jeevan",
+    "email": "jeevanjijithomas.14@gmail.com",
+    "message": "how long is the course",
+    "course": "Students Training"
+  },
+  {
+    "name": "jeevan",
+    "email": "jeevanjijithomas.14@gmail.com",
+    "message": "how long is the course",
+    "course": "Students Training"
+  }
+]
