@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="max-w-7xl mx-auto">
+  <h1 class="text-3xl md:text-4xl font-extrabold mb-4 text-black dark:text-white">Programs & Pricing</h1>
+  <p class="text-gray-700 dark:text-gray-300 mb-6">Choose a program. Prices shown are sample/dummy. Payment via UPI (instructions below).</p>
+
+  <div class="grid lg:grid-cols-3 gap-6">
+    <!-- Students -->
+    <div class="glass p-6 rounded-xl border border-black/5 dark:border-white/6" data-reveal>
+      <h3 class="text-xl font-semibold text-green-600 dark:text-green-400">Students Training</h3>
+      <p class="text-gray-700 dark:text-gray-200 mt-2">Life skills, communication, confidence building.</p>
+      <div class="mt-4 text-2xl font-bold text-black dark:text-white">₹ 4,999</div>
+
+      {% if enable_payments %}
+      <div class="mt-4 flex gap-2">
+        <a class="px-4 py-2 rounded btn-primary ripple" href="#pay">Pay via UPI</a>
+        <a class="px-4 py-2 rounded border border-black/8 dark:border-white/8 hover:bg-black/6 dark:hover:bg-white/5"
+           href="/contact?course=Students Training">Enquire</a>
+      </div>
+      {% else %}
+      <div class="mt-4">
+        <a class="px-4 py-2 rounded btn-primary ripple"
+           href="/contact?course=Students Training">Enquire Now</a>
+      </div>
+      {% endif %}
+
+      {% if enable_payments %}
+      <details class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+        <summary>UPI payment details</summary>
+        <div class="mt-2">
+          <p>UPI ID: <strong>nexusacademy@upi</strong> (dummy)</p>
+          <p>Remark: StudentsTraining</p>
+        </div>
+      </details>
+      {% endif %}
+    </div>
+
+    <!-- Placement -->
+    <div class="glass p-6 rounded-xl border border-black/5 dark:border-white/6" data-reveal>
+      <h3 class="text-xl font-semibold text-red-600 dark:text-red-400">Placement Readiness</h3>
+      <p class="text-gray-700 dark:text-gray-200 mt-2">Resume, interview practice, employability coaching.</p>
+      <div class="mt-4 text-2xl font-bold text-black dark:text-white">₹ 6,499</div>
+
+      {% if enable_payments %}
+      <div class="mt-4 flex gap-2">
+        <a class="px-4 py-2 rounded bg-red-400 text-black font-semibold" href="#pay">Pay via UPI</a>
+        <a class="px-4 py-2 rounded border border-black/8 dark:border-white/8 hover:bg-black/6 dark:hover:bg-white/5"
+           href="/contact?course=Placement Readiness">Enquire</a>
+      </div>
+      {% else %}
+      <div class="mt-4">
+        <a class="px-4 py-2 rounded btn-primary ripple"
+           href="/contact?course=Placement Readiness">Enquire Now</a>
+      </div>
+      {% endif %}
+
+      {% if enable_payments %}
+      <details class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+        <summary>UPI payment details</summary>
+        <div class="mt-2">
+          <p>UPI ID: <strong>nexusacademy@upi</strong> (dummy)</p>
+          <p>Remark: PlacementReady</p>
+        </div>
+      </details>
+      {% endif %}
+    </div>
+
+    <!-- Corporate -->
+    <div class="glass p-6 rounded-xl border border-black/5 dark:border-white/6" data-reveal>
+      <h3 class="text-xl font-semibold text-green-600 dark:text-green-400">Corporate Training</h3>
+      <p class="text-gray-700 dark:text-gray-200 mt-2">Leadership, teams, productivity workshops.</p>
+      <div class="mt-4 text-2xl font-bold text-black dark:text-white">₹ 24,999</div>
+
+      {% if enable_payments %}
+      <div class="mt-4 flex gap-2">
+        <a class="px-4 py-2 rounded btn-primary ripple" href="#pay">Request Workshop</a>
+        <a class="px-4 py-2 rounded border border-black/8 dark:border-white/8 hover:bg-black/6 dark:hover:bg-white/5"
+           href="/contact?course=Corporate Training">Enquire</a>
+      </div>
+      {% else %}
+      <div class="mt-4">
+        <a class="px-4 py-2 rounded btn-primary ripple"
+           href="/contact?course=Corporate Training">Enquire Now</a>
+      </div>
+      {% endif %}
+
+      {% if enable_payments %}
+      <details class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+        <summary>UPI payment details</summary>
+        <div class="mt-2">
+          <p>UPI ID: <strong>nexusacademy@upi</strong> (dummy)</p>
+          <p>Remark: CorporateTraining</p>
+        </div>
+      </details>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if enable_payments %}
+  <div id="pay" class="mt-8 glass p-6 rounded-xl border border-black/5 dark:border-white/6" data-reveal>
+    <h3 class="text-2xl font-semibold text-black dark:text-white">Pay via UPI</h3>
+    <p class="text-gray-700 dark:text-gray-300 mt-2">Use UPI app to pay to <strong>nexusacademy@upi</strong> (dummy). Send screenshot + txn id to nexusacademykerala@gmail.com or WhatsApp +91 73063 87009.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <div class="p-4 rounded bg-white/5 dark:bg-white/5 text-gray-700 dark:text-gray-300">
+        <strong>QR placeholder</strong>
+        <div class="mt-3 text-sm text-gray-600 dark:text-gray-400">Replace with real UPI QR image</div>
+      </div>
+      <div class="p-4 rounded bg-white/5 dark:bg-white/5 text-gray-700 dark:text-gray-300">
+        <strong>Instructions</strong>
+        <ol class="list-decimal ml-5 mt-3">
+          <li>Open UPI app</li>
+          <li>Pay to UPI ID: <code>nexusacademy@upi</code></li>
+          <li>Remark: Program name</li>
+          <li>Send screenshot + txn id</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

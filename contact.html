@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="max-w-xl mx-auto">
+  <h1 class="text-3xl font-bold mb-4">Contact Us</h1>
+
+  {% if success %}
+  <div class="p-3 rounded bg-green-500/20 text-green-600 mb-4">
+    Message sent successfully!
+  </div>
+  {% endif %}
+
+  {% if course %}
+  <p class="mb-4 text-sm text-blue-500">
+    Enquiry for: <strong>{{ course }}</strong>
+  </p>
+  {% endif %}
+
+  <form method="POST" action="/contact" class="grid gap-3">
+
+    <input type="hidden" name="course" value="{{ course }}">
+
+    <input name="name" placeholder="Name" required
+      class="p-3 rounded bg-white/90 dark:bg-white/5">
+
+    <input name="email" placeholder="Email" required
+      class="p-3 rounded bg-white/90 dark:bg-white/5">
+
+    <textarea name="message" placeholder="Message" required
+      class="p-3 rounded bg-white/90 dark:bg-white/5"></textarea>
+
+    <button type="submit"
+      class="px-4 py-2 rounded btn-primary ripple">
+      Send
+    </button>
+
+  </form>
+</section>
+
+{% endblock %}
